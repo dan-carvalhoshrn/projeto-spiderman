@@ -57,6 +57,7 @@ body::before {
     object-fit: cover;
     position: absolute;
     opacity: 1;
+    transition: opacity 0.9s ease-in-out;
 }
 
 .card__image {
@@ -64,6 +65,7 @@ body::before {
     height: 100%;
     object-fit: contain;
     position: relative;
+    transition: 0.5s ease-in-out;
 }
 
 .card__tittle {
@@ -113,4 +115,15 @@ body::before {
     width: 50%;
     height: 2px;
     position: absolute;
+}
+
+/* Hoover Animation */
+
+.card--hoovered .card__background {
+    cursor: pointer;
+    opacity: 0;
+}
+
+.card--hoovered .card__image {
+    transform: scale(1.4);
 }
