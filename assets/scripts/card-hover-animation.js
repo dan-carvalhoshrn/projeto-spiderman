@@ -1,9 +1,11 @@
 function handleMouseEnter() {
     this.classList.add('card--hoovered');
+    document.body.id = `${this.id}-hoovered`;
 }
 
 function handleMouseLeave() {
     this.classList.remove('card--hoovered');
+    document.body.id = '';
 }
 
 function addEventListenersToCards() {
